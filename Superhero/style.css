@@ -1,0 +1,205 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text */
+    line-height: 1.0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: #000000;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: flex-start;
+}
+
+nav ul li {
+    margin-right: 30px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    padding: 5px 10px;
+}
+
+nav ul li a:hover {
+    color: #cccccc;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 0;
+    background-color: #000000;
+    color: #ffffff;
+    margin-bottom: 60px;
+    border-bottom: 1px solid #333;
+}
+
+.hero h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 500;
+}
+
+.hero p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: 0 auto;
+    color: #aaaaaa;
+}
+
+/* Gallery Section */
+.gallery {
+    padding: 60px 0;
+    text-align: center;
+    background-color: #121212;
+}
+
+.gallery h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+}
+
+.gallery h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background: #ffffff;
+    bottom: -10px;
+    left: 25%;
+}
+
+.avengers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.avenger-card {
+    background: #1e1e1e;
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid #333;
+    transition: transform 0.3s ease;
+}
+
+.avenger-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.avenger-img {
+    height: 300px;
+    overflow: hidden;
+}
+
+.avenger-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    filter: grayscale(30%) contrast(110%);
+}
+
+.avenger-card:hover .avenger-img img {
+    transform: scale(1.05);
+    filter: grayscale(0%) contrast(100%);
+}
+
+.avenger-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.avenger-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.avenger-info p {
+    color: #aaaaaa;
+}
+
+/* Footer */
+footer {
+    background: #000000;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 60px;
+    border-top: 1px solid #333;
+}
+
+footer p {
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #aaaaaa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        width: 100%;
+        justify-content: space-around;
+    }
+    
+    nav ul li {
+        margin-right: 0;
+    }
+    
+    .hero h1 {
+        font-size: 48px;
+    }
+    
+    .hero p {
+        font-size: 18px;
+        padding: 0 20px;
+    }
+    
+    .avengers-grid {
+        grid-template-columns: 1fr;
+    }
+}
